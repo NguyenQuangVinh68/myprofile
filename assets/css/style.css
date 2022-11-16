@@ -67,6 +67,11 @@ header ul li:nth-child(3) a::before {
   content: "3.";
 }
 
+#icon {
+  font-size: 20xp;
+  color: var(--color-dark);
+}
+
 /* main */
 
 .main {
