@@ -1,0 +1,289 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka + One&family=Mitr:wght@400;600&family=Noto + Sans + Mono:wght@400;600;800&display=swap");
+
+:root {
+  --bg-dark: #0a192f;
+  --color-light: #5ff1d0;
+  --color-dark: #0aeeb9;
+  --color-secondary: #8892b0;
+  --color-line: #233554;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans Mono", monospace;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-dark);
+}
+
+a {
+  color: inherit !important;
+}
+
+a:hover {
+  color: var(--color-light) !important;
+}
+
+p {
+  color: #8892b0 !important;
+}
+
+header {
+  background-color: rgba(10, 25, 47, 0.98);
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 10px 0 !important;
+  box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
+  transition: 0.3s;
+}
+header.sticky {
+  box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
+  padding: 0 !important;
+  transition: 0.3s;
+}
+
+header .active {
+  color: var(--color-dark) !important;
+}
+
+header ul li a::before {
+  margin-right: 10px;
+  color: var(--color-light) !important;
+}
+header ul li:nth-child(1) a::before {
+  content: "1.";
+}
+header ul li:nth-child(2) a::before {
+  content: "2.";
+}
+header ul li:nth-child(3) a::before {
+  content: "3.";
+}
+
+/* main */
+
+.main {
+  position: relative;
+  width: 100%;
+  padding: 0 150px;
+  color: white;
+}
+
+/* introduce */
+
+.main .introduce {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 0px;
+}
+
+.main .introduce div h1 {
+  font-weight: 600;
+  font-size: clamp(40px, 8vw, 80px);
+}
+
+.main .introduce div:nth-child(3) h1 {
+  color: #8892b0 !important;
+}
+
+.main .introduce div:nth-child(4) p {
+  margin-top: 16px;
+  max-width: 600px;
+}
+
+.main .btn {
+  text-decoration: none;
+  border: 2px solid var(--color-dark);
+  color: #64ffda !important;
+  border-radius: 5px;
+  transition: 0.4s;
+}
+
+.main .btn:hover {
+  background-color: rgba(100, 255, 218, 0.1);
+  transition: 0.4s;
+}
+
+.main .in_touch {
+  padding: 20px 60px;
+}
+
+/* about */
+
+.main #about {
+  padding: 100px 0;
+}
+
+.main .number-header::before {
+  color: var(--color-dark);
+  margin-right: 10px;
+  font-weight: 200;
+}
+
+.main .number-header_about::before {
+  content: "01.";
+}
+
+.main .number-header {
+  text-transform: capitalize;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.main .number-header::after {
+  content: "";
+  display: block;
+  top: -5px;
+  width: 300px;
+  height: 1px;
+  margin-left: 20px;
+  background-color: var(--color-line);
+}
+
+.main .skill_list {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 0;
+  list-style: none;
+  text-transform: capitalize;
+  color: var(--color-secondary);
+}
+
+.main .skill_list li {
+  display: flex;
+  align-items: center;
+}
+
+.main .skill_list li::before {
+  content: ">";
+  color: var(--color-light);
+  margin-right: 10px;
+  font-size: 10px;
+}
+
+.main .avata_border {
+  position: absolute;
+  right: 7%;
+  top: 5%;
+  border: 2px solid var(--color-dark);
+  z-index: -1;
+}
+
+/* project */
+
+.main #project {
+  padding: 100px 0;
+}
+.main #project h6 {
+  color: var(--color-dark) !important;
+}
+
+.main .number-header_project::before {
+  content: "02.";
+}
+
+.main #project .project-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 10;
+}
+
+.main #project .project-image {
+  position: absolute;
+  width: 50%;
+}
+
+.main #project .project-des {
+  width: 60%;
+  background-color: var(--color-line) !important;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.main #project .project-content__left {
+  align-items: flex-end;
+}
+.main #project .project-content__right {
+  align-items: flex-start;
+}
+.main #project .project-image__right {
+  right: 0;
+}
+.main #project .project-image__left {
+  left: 0;
+}
+
+.main #project .project-des__left {
+  text-align: left;
+}
+.main #project .project-des__right {
+  text-align: right;
+}
+
+.main #project ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 0;
+  padding: 0;
+}
+.main #project ul li {
+  color: var(--color-secondary) !important;
+  margin: 0 10px 5px;
+}
+
+/* contact */
+
+.main #contact {
+  padding: 100px 0;
+  margin: 0 20px;
+}
+
+.main #contact .contact-content {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* responsive */
+@media only screen and (max-width: 769px) {
+  .main {
+    padding: 0 80px;
+  }
+
+  .main .introduce div h1 {
+    font-size: 50px;
+  }
+  .main .number-header::after {
+    margin-left: 20px;
+    width: 200px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .main {
+    padding: 0 20px;
+  }
+
+  .main .introduce div h1 {
+    font-size: 30px;
+  }
+
+  .main .number-header::after {
+    margin-left: 10px;
+    width: 100px;
+  }
+}
