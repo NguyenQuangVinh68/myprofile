@@ -67,6 +67,45 @@ header ul li:nth-child(3) a::before {
   content: "3.";
 }
 
+/* media */
+
+.media {
+  position: fixed;
+  bottom: 0;
+  left: 40px;
+  width: 40px;
+  color: var(--color-secondary);
+}
+
+.list__media {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.list__media li a {
+  display: inline-block;
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
+  padding: 10px;
+}
+.list__media li i {
+  font-size: 1.2rem;
+}
+
+.list__media::after {
+  content: "";
+  width: 2px;
+  display: block;
+  height: 90px;
+  z-index: 100;
+  background-color: var(--color-secondary);
+}
+
 /* main */
 
 .main {
