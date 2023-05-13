@@ -113,6 +113,7 @@ header ul li:nth-child(3) a::before {
   width: 100%;
   padding: 50px 150px;
   color: white;
+  margin-top: 1rem;
 }
 
 /* introduce */
@@ -299,6 +300,7 @@ header ul li:nth-child(3) a::before {
 }
 
 /* responsive */
+
 @media only screen and (max-width: 769px) {
   .main {
     padding: 0 80px;
@@ -310,6 +312,31 @@ header ul li:nth-child(3) a::before {
   .main .number-header::after {
     margin-left: 20px;
     width: 200px;
+  }
+  .media_container {
+    display: none;
+  }
+  .main #project .project-image {
+    width: 100%;
+    opacity: 0.5;
+  }
+  .main #project .project-content {
+    display: block;
+    opacity: 0.9;
+    background: #0c2034;
+    border-radius: 5px;
+    padding: 2.5rem;
+  }
+  .main #project .project-des {
+    width: 100%;
+    background: #0c2034 !important;
+    text-align: justify;
+  }
+  .main #project .project-content__left ul {
+    justify-content: end;
+  }
+  .main #project .project-content__right ul {
+    justify-content: start;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -324,5 +351,10 @@ header ul li:nth-child(3) a::before {
   .main .number-header::after {
     margin-left: 10px;
     width: 100px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .main #project .project-content {
+    padding: 1.2rem;
   }
 }
